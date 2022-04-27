@@ -68,3 +68,47 @@ persona.nombre = "dario"
 persona.apellido = "guerra"
 persona.edad = 34
 console.log(persona);
+
+//Promesa
+/*
+fetch("https://rickandmortyapi.com/api/character")
+.then((res => res.json())
+.then((data) => {
+  data.results.forEach((element) => {
+console.log(element);
+  });
+});
+*/
+
+const obtenerPokemones = async () => {
+  try {
+    const res = await fetch("https://rickandmortyapi.com/api/character");
+    const data = await res.json();
+    const results = await data.results;
+    const personajesMujeres = results.filter(p => p.gender === 'female');
+    console.log(personajesMujeres);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+obtenerPokemones();
+
+//Objeto literal
+
+const persona = {
+  nombre: "roberto",
+  apellido: "morales",
+  edad: 32,
+  direccion: {
+    ciudad: "barranquilla",
+    pais: "colombia"
+  }
+};
+console.log(persona);
+
+const persona2 = { ...persona };
+
+persona2.nombre = "carlos";
+console.log(persona);
+console.log(persona2);
