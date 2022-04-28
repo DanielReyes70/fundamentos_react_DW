@@ -112,3 +112,76 @@ const persona2 = { ...persona };
 persona2.nombre = "carlos";
 console.log(persona);
 console.log(persona2);
+
+//Arreglos
+
+const arreglo = [1, 2, 3, 4];
+const arreglo2 = [...arreglo, 100];
+
+arreglo[0] = 50;
+
+//console.log(arreglo);
+//console.log(arreglo2);
+
+const a = new Array(100);
+//console.log(a);
+
+//Funcion map
+
+console.log("antes del map" + arreglo);
+const map = arreglo.map(function () {
+  return 5;
+});
+
+const map2 = arreglo.map(() => {
+  return 5;
+});
+
+const map3 = arreglo.map(() => 5);
+const arreglo3 = [1, 2, 3, 4];
+const map4 = arreglo.map(() => 5);
+
+console.log(map);
+console.log("despues del map: " + map4);
+
+//Crear un array que dado un array inicial regrese
+//la multiplicacion de sus elementos por 2
+
+const arreglo4 = [1, 2, 3, 4];
+
+const respuesta = arreglo4.map((item) => item * 2);
+console.log("arreglo inicial:" + arreglo4);
+console.log("respuesta:" + respuesta);
+
+//Funcion find
+//find solo te regresa un solo elemento
+
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// expected output: 12
+
+//Funcion filter
+//esta te regresa todos los elementos
+const array2 = [5, 12, 8, 130, 44];
+
+const filter = array2.filter((element) => element > 10);
+
+console.log(filter);
+// expected output: [12, 130, 44]
+
+//Operador ternario
+function getFee(isMember) {
+  return (isMember ? '$2.00' : '$10.00');
+}
+
+console.log(getFee(true));
+// expected output: "$2.00"
+
+console.log(getFee(false));
+// expected output: "$10.00"
+
+console.log(getFee(null));
+// expected output: "$10.00"
