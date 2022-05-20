@@ -7,12 +7,13 @@ import Eventos from './components/Eventos';
 import Listas from './components/Listas';
 import PeticionApi from './components/PeticionApi';
 import Formulario from './components/Formulario';
+import PruebaPropiedades from './components/PruebaPropiedades';
 
 function App() {
   return (
     <>
 
-      <Formulario/>
+      <PruebaPropiedades  titulo = 'esto es un titulo' />
     </>
   );
 }

@@ -195,8 +195,7 @@ const Formulario = () => {
                                         <button
                                             className='btn btn-warning btn-block'
                                             type='submit'
-                                        >Editar
-                                        </button>
+                                        >Editar</button>
                                         <button
                                             className='btn btn-dark btn-block mx-2'
                                             onClick={() => cancelar()}
