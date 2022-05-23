@@ -12,9 +12,11 @@ import PruebaPropiedades from './components/PruebaPropiedades';
 function App() {
   return (
     <>
-
-      <PruebaPropiedades  titulo = 'esto es un titulo' />
+      <Contador valor_inicial={50}/>
+      {//<PruebaPropiedades  titulo = 'esto es un titulo' />
+      }
     </>
+
   );
 }
 
